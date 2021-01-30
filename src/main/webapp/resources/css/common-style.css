@@ -1,0 +1,37 @@
+#page{
+	width: 100%;
+	margin: 0 auto;
+}
+
+#header{
+	width: 100%;
+	border: 0px solid #000;
+	margin-bottom:16px;
+}
+
+#content{
+	width: 100%;
+	margin-right:16px;
+	margin-bottom:16px;
+	border: 0px solid #000;
+}
+
+#footer{
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background-color: #007A33;
+	color: #BA9653;
+	text-align: center;
+}
+
+#contentbody {
+   float: right;
+   width: 80%;
+}
+ 
+#contentmenu {
+   float: left;
+   width: 20%;
+}
