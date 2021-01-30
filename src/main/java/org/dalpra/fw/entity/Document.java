@@ -39,6 +39,10 @@ public class Document implements Serializable, Comparable<Document> {
 	public String getType() {
 		return type;
 	}
+	
+	public String ridireziona() {
+		return this.url;
+	}
 
 	public void setType(String type) {
 		this.type = type;

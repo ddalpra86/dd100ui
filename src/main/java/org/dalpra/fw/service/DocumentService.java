@@ -19,6 +19,7 @@ public class DocumentService {
 
 		//Applications
 		TreeNode dd100ui = new DefaultTreeNode(new Document("DD100UI", "-", "Folder",""), applications);
+		TreeNode index = new DefaultTreeNode("app", new Document("home", "-", "Application", "index?faces-redirect=true"), dd100ui);
 		TreeNode users = new DefaultTreeNode("app", new Document("users", "-", "Application", "users?faces-redirect=true"), dd100ui);
 		TreeNode fruits = new DefaultTreeNode("app", new Document("fruits", "-", "Application", "fruits?faces-redirect=true"), dd100ui);
 
