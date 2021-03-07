@@ -9,7 +9,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-@RegisterRestClient(baseUri = "https://localhost:8443/system")
+@RegisterRestClient(baseUri = "http://localhost:8080/system")
 @Path("/properties")
 @RequestScoped
 public interface SystemClient extends AutoCloseable{

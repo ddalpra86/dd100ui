@@ -1,5 +1,6 @@
 package org.acme.security.jwt;
 
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -27,6 +28,8 @@ public class GenerateToken {
                   .claim(Claims.birthdate.name(), "2001-07-13") 
                 .sign();
         HashMap<String, Long> timeClaims = new HashMap<>();
+        
+           
         if (args.length > 1) {
             long duration = Long.parseLong(args[1]);
             long exp = TokenUtils.currentTimeInSecs() + duration;

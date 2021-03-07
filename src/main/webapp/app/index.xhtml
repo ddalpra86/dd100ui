@@ -32,6 +32,16 @@
                     #{quality.description}
                 </p:dataList>
 				</p:panel>
+				<h:panelGrid class="table" columns="2" border="3">
+					<h:panelGroup>System Username:</h:panelGroup>
+					<h:panelGroup>#{applicationBean.username}</h:panelGroup>
+					<h:panelGroup>Current OS:</h:panelGroup>
+					<h:panelGroup>#{applicationBean.os}</h:panelGroup>
+					<h:panelGroup>Roles:</h:panelGroup>
+					<h:panelGroup>#{applicationBean.jwtRoles}</h:panelGroup>
+					<h:panelGroup>JSON Web Token:</h:panelGroup>
+					<h:panelGroup>#{applicationBean.jwt}</h:panelGroup>
+				</h:panelGrid>
 			</ui:define>
 		</ui:composition>
 	</h:body>
