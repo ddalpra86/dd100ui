@@ -49,11 +49,12 @@
 			<version>2.8.6</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.microprofile</groupId>
-			<artifactId>microprofile</artifactId>
-			<scope>provided</scope>
-			<type>pom</type>
-		</dependency>
+            <groupId>org.eclipse.microprofile</groupId>
+            <artifactId>microprofile</artifactId>
+        
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
 		<dependency>
 			<groupId>fish.payara.api</groupId>
 			<artifactId>payara-api</artifactId>
