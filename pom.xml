@@ -51,7 +51,6 @@
 		<dependency>
 			<groupId>org.eclipse.microprofile</groupId>
 			<artifactId>microprofile</artifactId>
-
 			<type>pom</type>
 			<scope>provided</scope>
 		</dependency>
@@ -63,7 +62,7 @@
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
-			<version>10.0.0-RC1</version>
+			<version>10.0.0-RC2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>
@@ -76,14 +75,25 @@
 			<version>${smallrye.jwt.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt</artifactId>
-			<version>${version.jsonwebtoken}</version>
-		</dependency>
-		<dependency>
 			<groupId>org.eclipse.microprofile.rest.client</groupId>
 			<artifactId>microprofile-rest-client-api</artifactId>
-			<version>2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>0.11.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>0.11.2</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>0.11.2</version>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 	<build>

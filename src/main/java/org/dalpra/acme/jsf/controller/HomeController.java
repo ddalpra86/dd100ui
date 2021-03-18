@@ -1,9 +1,8 @@
 package org.dalpra.acme.jsf.controller;
 
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.security.PrivateKey;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import javax.annotation.PostConstruct;
@@ -16,13 +15,10 @@ import javax.security.enterprise.SecurityContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 
-import org.acme.security.jwt.TokenUtils;
+import org.dalpra.acme.auth.JWTGenerateValidateRSA;
 import org.dalpra.acme.jsf.entities.Quality;
 import org.dalpra.acme.jsf.entities.User;
 import org.dalpra.acme.jsf.services.DataService;
-import org.eclipse.microprofile.jwt.Claims;
-
-import io.smallrye.jwt.build.Jwt;
 
 @RequestScoped
 @Named
@@ -38,18 +34,24 @@ public class HomeController {
 	FacesContext facesContext;
 
 	private String token;
-
+	
 	private Optional<User> currentUser;
 	private List<Quality> currentQualities;
 
 	@PostConstruct
 	public void initialize(){
 		try {
+		
 			String username = securityContext.getCallerPrincipal().getName();
 			this.currentUser = dataService.getUser(username);
 			this.currentUser.ifPresent(user -> {
 				this.currentQualities  = dataService.getQualities(user);
 			});
+			
+			List<String> target = new ArrayList<>();
+			target.add(this.currentUser.get().getGroup());
+
+			token = JWTGenerateValidateRSA.createJwtSignedHMAC();
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -68,9 +70,14 @@ public class HomeController {
 	public boolean isAllowedToSeeUsers(){
 		return currentUser.get().getGroup().equals("admin");
 	}
+	
+	public String getToken() {
+		return token;
+	}
 
-
-
+	public void setToken(String token) {
+		this.token = token;
+	}
 
 	public String logout() throws ServletException{
 		ExternalContext ec = facesContext.getExternalContext();

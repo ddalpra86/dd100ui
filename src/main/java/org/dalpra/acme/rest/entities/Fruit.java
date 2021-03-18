@@ -2,18 +2,16 @@ package org.dalpra.acme.rest.entities;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @XmlRootElement
-@JsonIgnoreProperties(ignoreUnknown = true)
+//@JsonIgnoreProperties(ignoreUnknown = true)
 public class Fruit {
 
 	private Long id;
 	private String name;
 	private String description;
 
-	public Fruit() {
-	}
+	public Fruit() {	}
 
 	public Fruit(Long id, String name, String description) {
 		this.id = id;
