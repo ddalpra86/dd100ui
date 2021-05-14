@@ -18,6 +18,25 @@
 		<version.payara>5.2021.1</version.payara>
 		<version.jsonwebtoken>0.9.1</version.jsonwebtoken>
 	</properties>
+	<developers>
+    		<developer>
+      			<id>jdoe</id>
+      			<name>John Doe</name>
+      			<email>jdoe@example.com</email>
+      			<url>http://www.example.com/jdoe</url>
+      			<organization>ACME</organization>
+      			<organizationUrl>http://www.example.com</organizationUrl>
+      			<roles>
+        			<role>architect</role>
+       	 			<role>developer</role>
+      			</roles>
+      			<timezone>America/New_York</timezone>
+      			<properties>
+        			<picUrl>http://www.example.com/jdoe/pic</picUrl>
+      			</properties>
+    		</developer>
+  	</developers>
+	
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
