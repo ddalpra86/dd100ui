@@ -14,7 +14,7 @@
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
-		<smallrye.jwt.version>3.0.0</smallrye.jwt.version>
+		<smallrye.jwt.version>3.1.0</smallrye.jwt.version>
 		<version.payara>5.2021.1</version.payara>
 		<version.jsonwebtoken>0.9.1</version.jsonwebtoken>
 	</properties>
